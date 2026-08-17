@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Recomposición</title>
+
+  <meta name="description" content="Plan personal de entrenamiento, movilidad y alimentación." />
+  <meta name="theme-color" content="#16232B" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Recomposición" />
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #EFF1EE; }
+    #boot {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #6E7F86; font-size: 14px; padding: 40px 20px; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"><div id="boot">Cargando tu plan…</div></div>
+
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js" crossorigin></script>
+  <script type="text/babel" data-presets="react" src="app.jsx"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js").catch(function () {});
+      });
+    }
+  </script>
+</body>
+</html>

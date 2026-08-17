@@ -1,0 +1,16 @@
+{
+  "name": "Recomposición — plan personal",
+  "short_name": "Recomposición",
+  "description": "Entrenamiento, movilidad y alimentación con ayuno intermitente.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EFF1EE",
+  "theme_color": "#16232B",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
